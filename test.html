@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @media print {
+      @page {
+        margin: 8mm;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      button {
+        display: none;
+      }
+
+      .btn, .btn-back {
+        display: none !important;
+      }
+
+      .page {
+        page-break-after: always;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .invoice-container {
+        width: 100%;
+        padding: 0;
+        border: none;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      padding: 10px;
+    }
+
+    .btn {
+      background-color: blue;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-size: 10px;
+      margin-top: 10px;
+      height: 40px;
+    }
+
+    .btn:hover {
+      background-color: darkblue;
+    }
+
+    .btn-back {
+      background-color: green;
+      color: white;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .btn-back:hover {
+      background-color: darkgreen;
+    }
+
+    .btns {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .invoice-container {
+      max-width: 100%;
+      margin: auto;
+      padding: 15px;
+    }
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+
+    .heading h2 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .invoice-no {
+      font-size: 12px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .date-top {
+      font-size: 11px;
+      text-align: right;
+      margin-top: -5px;
+    }
+
+    .party-name {
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 4px;
+      text-align: center;
+      font-size: 9px;
+    }
+
+    .prodbreakdown {
+      margin-top: 8px;
+      font-size: 11px;
+    }
+
+    .footer {
+      margin-top: 10px;
+    }
+
+    .contfooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      font-size: 10px;
+      margin-bottom: 50px;
+    }
+
+    .footer-note {
+      font-size: 7px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Page 1 -->
+<div class="page">
+  <div class="invoice-container">
+    <div class="heading">
+      <h2>Invoice #1</h2>
+      <div class="invoice-no">INV-001</div>
+    </div>
+    <div class="date-top">Date: 2025-04-09</div>
+    <div class="party-name">Party Name: Dummy</div>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th><th>Item</th><th>Qty</th><th>Rate</th><th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items 1-16 -->
+        <tr><td>1</td><td>Item 1</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>2</td><td>Item 2</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>3</td><td>Item 3</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>4</td><td>Item 4</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>5</td><td>Item 5</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>6</td><td>Item 6</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>7</td><td>Item 7</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>8</td><td>Item 8</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>9</td><td>Item 9</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>10</td><td>Item 10</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>11</td><td>Item 11</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>12</td><td>Item 12</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>13</td><td>Item 13</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>14</td><td>Item 14</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>15</td><td>Item 15</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>16</td><td>Item 16</td><td>2</td><td>50</td><td>100</td></tr>
+      </tbody>
+    </table>
+    <div class="footer-note">This is a system-generated invoice.</div>
+  </div>
+</div>
+
+<!-- Page 2 -->
+<div class="page">
+  <div class="invoice-container">
+    <div class="heading">
+      <h2>Invoice #2</h2>
+      <div class="invoice-no">INV-002</div>
+    </div>
+    <div class="date-top">Date: 2025-04-09</div>
+    <div class="party-name">Party Name: Dummy</div>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th><th>Item</th><th>Qty</th><th>Rate</th><th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items 17-32 -->
+        <tr><td>17</td><td>Item 17</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>18</td><td>Item 18</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>19</td><td>Item 19</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>20</td><td>Item 20</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>21</td><td>Item 21</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>22</td><td>Item 22</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>23</td><td>Item 23</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>24</td><td>Item 24</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>25</td><td>Item 25</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>26</td><td>Item 26</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>27</td><td>Item 27</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>28</td><td>Item 28</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>29</td><td>Item 29</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>30</td><td>Item 30</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>31</td><td>Item 31</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>32</td><td>Item 32</td><td>2</td><td>50</td><td>100</td></tr>
+      </tbody>
+    </table>
+    <div class="footer-note">This is a system-generated invoice.</div>
+  </div>
+</div>
+
+<!-- Page 3 -->
+<div class="page">
+  <div class="invoice-container">
+    <div class="heading">
+      <h2>Invoice #3</h2>
+      <div class="invoice-no">INV-003</div>
+    </div>
+    <div class="date-top">Date: 2025-04-09</div>
+    <div class="party-name">Party Name: Dummy</div>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th><th>Item</th><th>Qty</th><th>Rate</th><th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items 33-48 -->
+        <tr><td>33</td><td>Item 33</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>34</td><td>Item 34</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>35</td><td>Item 35</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>36</td><td>Item 36</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>37</td><td>Item 37</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>38</td><td>Item 38</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>39</td><td>Item 39</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>40</td><td>Item 40</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>41</td><td>Item 41</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>42</td><td>Item 42</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>43</td><td>Item 43</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>44</td><td>Item 44</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>45</td><td>Item 45</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>46</td><td>Item 46</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>47</td><td>Item 47</td><td>2</td><td>50</td><td>100</td></tr>
+        <tr><td>48</td><td>Item 48</td><td>2</td><td>50</td><td>100</td></tr>
+      </tbody>
+    </table>
+    <div class="footer-note">This is a system-generated invoice.</div>
+  </div>
+</div>
+
+</body>
+</html>
